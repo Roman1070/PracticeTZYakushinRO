@@ -1,0 +1,10 @@
+services:
+  workers_go:
+    build:
+      context: .
+      dockerfile: ./internal/delivery/Dockerfile
+    ports:
+      - "8000:8000"
+    image: workers-go-image
+    container_name: workers-go
+    restart: unless-stopped

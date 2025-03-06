@@ -1,0 +1,5 @@
+env: "local"
+
+retriesCount: 3
+timeout: 1.2
+workersCount: 5
