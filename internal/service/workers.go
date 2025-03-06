@@ -17,7 +17,6 @@ type JobData struct {
 	ID             string
 	Name           string
 	JobData        []byte
-	Priority       uint16
 	RetriesCount   uint16
 	SimulatedError error
 }

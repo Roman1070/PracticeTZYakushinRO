@@ -103,7 +103,6 @@ func (c *Client) CreateJob(r *http.Request, jobID string) (workers.JobData, erro
 	type request struct {
 		JobData        []byte `json:"jobData,omitempty"`
 		Name           string `json:"name,omitempty"`
-		Priority       uint16 `json:"priority,omitempty"`
 		SimulatedError string `json:"error,omitempty"`
 	}
 
@@ -133,7 +132,6 @@ func (c *Client) CreateJob(r *http.Request, jobID string) (workers.JobData, erro
 	}
 
 	job.ID = jobID
-	job.Priority = req.Priority
 	job.RetriesCount = c.retriesCount
 
 	return job, nil
